@@ -1,0 +1,44 @@
+networks:
+  proxy_default:
+    external: true
+    name: "proxy_default"
+
+services:
+  proxy-portsync-1:
+    container_name: "proxy-portsync-1"
+    entrypoint:
+      - "dotnet"
+      - "PortUpdate.dll"
+    environment:
+      - "LogLevel=Information"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - "ASPNETCORE_URLS=http://+:80"
+      - "DOTNET_RUNNING_IN_CONTAINER=true"
+      - "DOTNET_VERSION=7.0.10"
+    hostname: "ec1c8f1fe449"
+    image: "saile2204/portsync:latest"
+    ipc: "private"
+    labels:
+      com.docker.compose.config-hash: "62d9aaeae7b52cd5045a5ea71575836fa6e65d9ea398db81099eabdbca610d30"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: ""
+      com.docker.compose.image: "sha256:9c2efeaf34b8eeccfc6ee0d3fc5ce40f53f01e535e88632ccf4f29cebe997e0e"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "proxy"
+      com.docker.compose.project.config_files: "/root/Proxy/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/root/Proxy"
+      com.docker.compose.service: "portsync"
+      com.docker.compose.version: "2.20.2"
+    logging:
+      driver: "json-file"
+      options: {}
+    networks:
+      - "proxy_default"
+    restart: "unless-stopped"
+    stdin_open: true
+    tty: true
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    working_dir: "/app"
+
+version: "3.6"

@@ -1,0 +1,44 @@
+networks:
+  filecloud_default:
+    external: true
+    name: "filecloud_default"
+
+services:
+  filecloud.preview:
+    container_name: "filecloud.preview"
+    entrypoint:
+      - "/opt/libreoffice/init.sh"
+    environment:
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    hostname: "7738987c64a0"
+    image: "filecloud/filecloudpreview22.1:latest"
+    ipc: "private"
+    labels:
+      com.docker.compose.config-hash: "5f447b8ada6718d726c80def43b22b1c42808bfb570c734bb80f6c92aec00726"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: ""
+      com.docker.compose.image: "sha256:fec248ba82d66331c6311a494ef8a208264d360b28e3422b166463e96c2f09ca"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "filecloud"
+      com.docker.compose.project.config_files: "/data/compose/11/v1/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/data/compose/11/v1"
+      com.docker.compose.service: "filecloud.preview"
+      com.docker.compose.version: "2.20.2"
+    logging:
+      driver: "json-file"
+      options: {}
+    networks:
+      - "filecloud_default"
+    volumes:
+      - "/subvol-1000-disk-0/cloud:/var/clouddata"
+      - "9a7d2ff9f5bd137a2a5e0e6d1d850cfac4bcd15e8cff893fd93696325b0400c9:/tmp"
+      - "filecloud_var_html:/var/www/html"
+    working_dir: "/tmp"
+
+version: "3.6"
+
+volumes:
+  9a7d2ff9f5bd137a2a5e0e6d1d850cfac4bcd15e8cff893fd93696325b0400c9:
+    external: true
+  filecloud_var_html:
+    external: true

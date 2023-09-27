@@ -1,0 +1,42 @@
+networks:
+  proxy_default:
+    external: true
+    name: "proxy_default"
+
+services:
+  proxy-proxmox-1:
+    command:
+      - "sleep"
+      - "infinity"
+    container_name: "proxy-proxmox-1"
+    environment:
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    hostname: "122b561abae2"
+    image: "ubuntu"
+    ipc: "private"
+    labels:
+      caddy: "proxmox.sailehd.systems"
+      caddy.reverse_proxy: "https://192.168.178.66:8006"
+      caddy.reverse_proxy.transport: "http"
+      caddy.reverse_proxy.transport.tls_insecure_skip_verify: ""
+      caddy.tls.dns: "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA"
+      com.docker.compose.config-hash: "3fae1d9b89b2b025787d4b79b0f5dfdc72fdb68b04138085b0931dea4b65f74e"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: "ddns:service_started:false,caddy:service_started:false"
+      com.docker.compose.image: "sha256:c6b84b685f35f1a5d63661f5d4aa662ad9b7ee4f4b8c394c022f25023c907b65"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "proxy"
+      com.docker.compose.project.config_files: "/root/Proxy/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/root/Proxy"
+      com.docker.compose.service: "proxmox"
+      com.docker.compose.version: "2.20.2"
+      org.opencontainers.image.ref.name: "ubuntu"
+      org.opencontainers.image.version: "22.04"
+    logging:
+      driver: "json-file"
+      options: {}
+    networks:
+      - "proxy_default"
+    restart: "unless-stopped"
+
+version: "3.6"

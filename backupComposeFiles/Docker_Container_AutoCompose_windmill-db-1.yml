@@ -1,0 +1,52 @@
+networks:
+  windmill_windmill_link:
+    external: true
+    name: "windmill_windmill_link"
+
+services:
+  windmill-db-1:
+    command:
+      - "postgres"
+    container_name: "windmill-db-1"
+    entrypoint:
+      - "docker-entrypoint.sh"
+    environment:
+      - "POSTGRES_DB=windmill"
+      - "POSTGRES_PASSWORD=ejfjefsdjjölwhfgfilh"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/14/bin"
+      - "GOSU_VERSION=1.16"
+      - "LANG=en_US.utf8"
+      - "PG_MAJOR=14"
+      - "PG_VERSION=14.9-1.pgdg120+1"
+      - "PGDATA=/var/lib/postgresql/data"
+    hostname: "f4fc3b997deb"
+    image: "postgres:14"
+    ipc: "private"
+    labels:
+      com.docker.compose.config-hash: "69f39d0285562a9398cfb85301a520864881688fd7371e889eb3b16bd44fdcf4"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: ""
+      com.docker.compose.image: "sha256:5fb1753eb50a2f67896ad3f8af3f8e0c23419eaa856114edae6bc69647b27c9c"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "windmill"
+      com.docker.compose.project.config_files: "/data/compose/6/v1/docker-compose.yml"
+      com.docker.compose.project.environment_file: "/data/compose/6/v1/stack.env"
+      com.docker.compose.project.working_dir: "/data/compose/6/v1"
+      com.docker.compose.service: "db"
+      com.docker.compose.version: "2.20.2"
+    logging:
+      driver: "json-file"
+      options: {}
+    networks:
+      - "windmill_windmill_link"
+    ports:
+      - "5432:5432/tcp"
+    restart: "unless-stopped"
+    volumes:
+      - "windmill_db_data:/var/lib/postgresql/data"
+
+version: "3.6"
+
+volumes:
+  windmill_db_data:
+    external: true

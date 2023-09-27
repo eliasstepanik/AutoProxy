@@ -1,0 +1,310 @@
+[
+    {
+        "Id": "cbb6582da23769cae81e9099336820076dd9bba3bd03fc9d027b2b53df196ebd",
+        "Created": "2023-09-05T22:18:49.985711983Z",
+        "Path": "caddy",
+        "Args": [
+            "docker-proxy"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 144624,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-09-05T22:18:50.758003278Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:09f9ee9efdbea49e501ea4804ac3b720497a3e703d362f6e85ca68b8bc25a2ac",
+        "ResolvConfPath": "/var/lib/docker/containers/cbb6582da23769cae81e9099336820076dd9bba3bd03fc9d027b2b53df196ebd/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/cbb6582da23769cae81e9099336820076dd9bba3bd03fc9d027b2b53df196ebd/hostname",
+        "HostsPath": "/var/lib/docker/containers/cbb6582da23769cae81e9099336820076dd9bba3bd03fc9d027b2b53df196ebd/hosts",
+        "LogPath": "/var/lib/docker/containers/cbb6582da23769cae81e9099336820076dd9bba3bd03fc9d027b2b53df196ebd/cbb6582da23769cae81e9099336820076dd9bba3bd03fc9d027b2b53df196ebd-json.log",
+        "Name": "/proxy-caddy-1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/var/run/docker.sock:/var/run/docker.sock:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "proxy_caddy",
+            "PortBindings": {
+                "443/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "443"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "80"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "proxy_caddy_data",
+                    "Target": "/data",
+                    "VolumeOptions": {}
+                },
+                {
+                    "Type": "volume",
+                    "Source": "proxy_caddy_config",
+                    "Target": "/config",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/9cf1c9e33a494e9bb1563067279d725a058b8612f3d27a0f9d57fd86e15935ac-init/diff:/var/lib/docker/overlay2/ca6yy8e6auqvbk7c0r5xwd87a/diff:/var/lib/docker/overlay2/c4e8a38121b96d777bd9b34047c1b2bb8f78e727dd930207117f02892b74af7c/diff:/var/lib/docker/overlay2/a24c5ab818cdd37232df73388b21d59957d5423ea36be96ebead11ebdaa581be/diff:/var/lib/docker/overlay2/da04fbf4dd3309b7f465a2752d8ee9cbc1c1f1369f1d17b37ef0fc4e66aa55b6/diff:/var/lib/docker/overlay2/e20ab5734aeb66b30da7a49fe99045b920e641cf648bc7581a2d322f2f806670/diff",
+                "MergedDir": "/var/lib/docker/overlay2/9cf1c9e33a494e9bb1563067279d725a058b8612f3d27a0f9d57fd86e15935ac/merged",
+                "UpperDir": "/var/lib/docker/overlay2/9cf1c9e33a494e9bb1563067279d725a058b8612f3d27a0f9d57fd86e15935ac/diff",
+                "WorkDir": "/var/lib/docker/overlay2/9cf1c9e33a494e9bb1563067279d725a058b8612f3d27a0f9d57fd86e15935ac/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/var/run/docker.sock",
+                "Destination": "/var/run/docker.sock",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "volume",
+                "Name": "proxy_caddy_data",
+                "Source": "/var/lib/docker/volumes/proxy_caddy_data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "proxy_caddy_config",
+                "Source": "/var/lib/docker/volumes/proxy_caddy_config/_data",
+                "Destination": "/config",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "cbb6582da237",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "2019/tcp": {},
+                "443/tcp": {},
+                "443/udp": {},
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "CADDY_VERSION=v2.7.4",
+                "XDG_CONFIG_HOME=/config",
+                "XDG_DATA_HOME=/data"
+            ],
+            "Cmd": [
+                "caddy",
+                "docker-proxy"
+            ],
+            "Image": "saile2204/caddy-proxy:latest",
+            "Volumes": null,
+            "WorkingDir": "/srv",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "fdc5c4843ee2d4109573be216598474c84dcd906409615048376352b1ee11acf",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "ddns:service_started:false",
+                "com.docker.compose.image": "sha256:09f9ee9efdbea49e501ea4804ac3b720497a3e703d362f6e85ca68b8bc25a2ac",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "proxy",
+                "com.docker.compose.project.config_files": "/root/Proxy/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/root/Proxy",
+                "com.docker.compose.service": "caddy",
+                "com.docker.compose.version": "2.20.2",
+                "org.opencontainers.image.description": "a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go",
+                "org.opencontainers.image.documentation": "https://caddyserver.com/docs",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.source": "https://github.com/caddyserver/caddy-docker",
+                "org.opencontainers.image.title": "Caddy",
+                "org.opencontainers.image.url": "https://caddyserver.com",
+                "org.opencontainers.image.vendor": "Light Code Labs",
+                "org.opencontainers.image.version": "v2.7.4"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "2d31075c1992dc3290c3b58e649ca7a0884723451c6903863352e597d758454e",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "2019/tcp": null,
+                "443/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "443"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "443"
+                    }
+                ],
+                "443/udp": null,
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "80"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "80"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/2d31075c1992",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "proxy_caddy": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "proxy-caddy-1",
+                        "caddy",
+                        "cbb6582da237"
+                    ],
+                    "NetworkID": "c76f20c472c8e3f1f49ce9e97090d5b713ad95eba039b8322dfd5e258d2f8f44",
+                    "EndpointID": "c4a2f9148fec059d90501ec553f5365f0727faf0e89c117a9ff0a269dc2ea79e",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,257 @@
+[
+    {
+        "Id": "ddba136e2fd7d40264f49dfc17fb72e7128260babd7a60281bc445954a86aded",
+        "Created": "2023-09-04T15:15:28.382078139Z",
+        "Path": "/init",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1869,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-09-05T21:11:35.294435955Z",
+            "FinishedAt": "2023-09-05T21:11:19.594867184Z"
+        },
+        "Image": "sha256:f80425afe7d9b054d72584b0922d002e5f22379199d28bc3e68816d8c041b00c",
+        "ResolvConfPath": "/var/lib/docker/containers/ddba136e2fd7d40264f49dfc17fb72e7128260babd7a60281bc445954a86aded/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/ddba136e2fd7d40264f49dfc17fb72e7128260babd7a60281bc445954a86aded/hostname",
+        "HostsPath": "/var/lib/docker/containers/ddba136e2fd7d40264f49dfc17fb72e7128260babd7a60281bc445954a86aded/hosts",
+        "LogPath": "/var/lib/docker/containers/ddba136e2fd7d40264f49dfc17fb72e7128260babd7a60281bc445954a86aded/ddba136e2fd7d40264f49dfc17fb72e7128260babd7a60281bc445954a86aded-json.log",
+        "Name": "/home_assistent_elias-homeassistant-1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "unconfined",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/etc/localtime:/etc/localtime:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "c76f20c472c8e3f1f49ce9e97090d5b713ad95eba039b8322dfd5e258d2f8f44",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": true,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [
+                "label=disable"
+            ],
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [
+                {
+                    "PathOnHost": "/dev/ttyUSB0",
+                    "PathInContainer": "/dev/ttyUSB0",
+                    "CgroupPermissions": "rwm"
+                }
+            ],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "home_assistent_elias_config",
+                    "Target": "/config",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": null,
+            "ReadonlyPaths": null
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/ea5d4c03e1271cd3a2bfa53fcba9531a6fff5a3ae7c8a2aeaa6a8e7b70b003a1-init/diff:/var/lib/docker/overlay2/2c982f9e9305d15f1f7d480ce605998fe565ef83055b3573073a92b65d7c66b4/diff:/var/lib/docker/overlay2/a76169dd390ec7e47991a0f23cb33cacd20d05e05e0c49c52d91813e41b2e848/diff:/var/lib/docker/overlay2/6c6efc03b38a232b3806f95c42179273361c826c99a49a99952995e449fbcbfa/diff:/var/lib/docker/overlay2/c555a51e129d3c930c8ed29705fcf847ffb5470cead3ba35aa87d0d1e665314f/diff:/var/lib/docker/overlay2/f84e93a902b74a7533d4d8e72eb7dcde84acb5fe037b480f981dabaa15e88fec/diff:/var/lib/docker/overlay2/fda40940d7f9d04f115ce48338986c2bc7640d81826040b8aebf4ffda6ef27c3/diff:/var/lib/docker/overlay2/3cf6be07d00a6324c27fc7befba9fcb1cede312705979ba472a3c571587cd7c8/diff:/var/lib/docker/overlay2/b752dd388aabe6bef6d6e6333e5bdbc0cb64e0bdb3b0e6101d0806bbce71a5dc/diff:/var/lib/docker/overlay2/6691e6898dc722f812a93d4984bcbb54e074b7f053c3834cd5ff8339e21c3fee/diff:/var/lib/docker/overlay2/7c6ee4eed35f3ee216a574dbda6ff19641572093eb139ff5edbf9aff1e6ddb90/diff:/var/lib/docker/overlay2/7eed69c149b557396161c7110a71ea64580d053082e1a458483f1af0cb6a465d/diff:/var/lib/docker/overlay2/308a706c193361435c6a628867fb4ce505e54f3d1ad0eb211d8b6ecb5c302149/diff:/var/lib/docker/overlay2/2e60ebc62337820edb99d06749121d10ec0344d2cef4540e9883b64c9e7d4476/diff:/var/lib/docker/overlay2/167e3b4601181de334c3d7737c4baf8b9f776ed833a1e5bd72e70f62955be8d9/diff:/var/lib/docker/overlay2/cf6fc02fb1e0171e5807fab20d176947074cbacd87466bddd8fe645af3f17e8d/diff:/var/lib/docker/overlay2/e9af09f8f897b5804fab9693d137a5dc46d956ccc601f38f511253c36b2021bb/diff:/var/lib/docker/overlay2/556e4ce58bbcd071cb41b55049da5edaca021bb05b4eccfd30bb6cea6383b8c5/diff:/var/lib/docker/overlay2/cff6d5b7f7099e1c875a796b40922dfccf329a349307740f27311c667d36682b/diff:/var/lib/docker/overlay2/466f6ff00bee08a798131e0f668678dd2c1730b78485af98671435ce33c13ad8/diff:/var/lib/docker/overlay2/de787978434ff89795b950f5a9d79b96d9474a7a46341520a81778082ad61c5d/diff:/var/lib/docker/overlay2/2f1fbad84aeb945847fccb3a867dcda06b24c00dba9dd1df3785e248c13fe8a3/diff:/var/lib/docker/overlay2/d40a3896bced159b559d08ce6266f1a89074a24236da4e03441217183c385878/diff:/var/lib/docker/overlay2/a57c2a4ac3352b7ceea6c9b929bbedfbe3b350796b0d1a1d045e405cf4c13acf/diff:/var/lib/docker/overlay2/3e1935e4777a16e29ce060a26769203971ca4615bbba326911b913dc594d56ff/diff:/var/lib/docker/overlay2/a2a308d342b4c9947e5899b250235bd387851f78737ff94eabc53b0c0e99f97b/diff:/var/lib/docker/overlay2/58b7c8d9567df46c393695926457937cba31dca5b04dba21e2901539333cc6fb/diff:/var/lib/docker/overlay2/cebfa306d52df0373972b065edb27dd8bdf067f8cb207b6a15eff6ef6fc261ec/diff:/var/lib/docker/overlay2/558d86bfc044e0b4f3c87d956d623e3f0e6d94999cb8c9d2bf19004ac2707a8e/diff:/var/lib/docker/overlay2/bfd06236b973e6925ba029f676db900a6cc09575e292928389ac4cf479733812/diff",
+                "MergedDir": "/var/lib/docker/overlay2/ea5d4c03e1271cd3a2bfa53fcba9531a6fff5a3ae7c8a2aeaa6a8e7b70b003a1/merged",
+                "UpperDir": "/var/lib/docker/overlay2/ea5d4c03e1271cd3a2bfa53fcba9531a6fff5a3ae7c8a2aeaa6a8e7b70b003a1/diff",
+                "WorkDir": "/var/lib/docker/overlay2/ea5d4c03e1271cd3a2bfa53fcba9531a6fff5a3ae7c8a2aeaa6a8e7b70b003a1/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "home_assistent_elias_config",
+                "Source": "/var/lib/docker/volumes/home_assistent_elias_config/_data",
+                "Destination": "/config",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/etc/localtime",
+                "Destination": "/etc/localtime",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "ddba136e2fd7",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "DISABLE_JEMALLOC=true",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "S6_BEHAVIOUR_IF_STAGE2_FAILS=2",
+                "S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0",
+                "S6_CMD_WAIT_FOR_SERVICES=1",
+                "S6_SERVICES_READYTIME=50",
+                "WHEELS_LINKS=https://wheels.home-assistant.io/musllinux/",
+                "S6_SERVICES_GRACETIME=220000"
+            ],
+            "Cmd": null,
+            "Image": "ghcr.io/home-assistant/home-assistant:stable",
+            "Volumes": null,
+            "WorkingDir": "/config",
+            "Entrypoint": [
+                "/init"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "caddy": "ha.sailehd.systems",
+                "caddy.reverse_proxy": "{{upstreams 8123}}",
+                "caddy.tls.dns": "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA",
+                "com.docker.compose.config-hash": "df79d7a19e8459d683db00ff34d6b7ad494086ffb56e06d847303842f9294ccb",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:f80425afe7d9b054d72584b0922d002e5f22379199d28bc3e68816d8c041b00c",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "home_assistent_elias",
+                "com.docker.compose.project.config_files": "/data/compose/8/v3/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/data/compose/8/v3",
+                "com.docker.compose.replace": "cb71c90222188559371640c84efe09ad756edaa38c9750742d122cdc8745baae",
+                "com.docker.compose.service": "homeassistant",
+                "com.docker.compose.version": "2.20.2",
+                "io.hass.arch": "amd64",
+                "io.hass.base.arch": "amd64",
+                "io.hass.base.image": "ghcr.io/home-assistant/amd64-base:3.18",
+                "io.hass.base.name": "python",
+                "io.hass.base.version": "2023.07.0",
+                "io.hass.type": "core",
+                "io.hass.version": "2023.8.4",
+                "org.opencontainers.image.authors": "The Home Assistant Authors",
+                "org.opencontainers.image.created": "2023-08-24 11:54:06+00:00",
+                "org.opencontainers.image.description": "Open-source home automation platform running on Python 3",
+                "org.opencontainers.image.documentation": "https://www.home-assistant.io/docs/",
+                "org.opencontainers.image.licenses": "Apache License 2.0",
+                "org.opencontainers.image.source": "https://github.com/home-assistant/core",
+                "org.opencontainers.image.title": "Home Assistant",
+                "org.opencontainers.image.url": "https://www.home-assistant.io/",
+                "org.opencontainers.image.version": "2023.8.4"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "780007695f4920b1fc0cbca111a984c241286e66f5e4f48b7930b29ebc123df0",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/780007695f49",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "proxy_caddy": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "home_assistent_elias-homeassistant-1",
+                        "homeassistant",
+                        "ddba136e2fd7"
+                    ],
+                    "NetworkID": "c76f20c472c8e3f1f49ce9e97090d5b713ad95eba039b8322dfd5e258d2f8f44",
+                    "EndpointID": "a5e8eaeed535c7119d2e4a80d361cbf5dbb8d9beae6e949d6e76d160d25609ae",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.9",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:09",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

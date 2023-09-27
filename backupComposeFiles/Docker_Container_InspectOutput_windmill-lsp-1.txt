@@ -1,0 +1,254 @@
+[
+    {
+        "Id": "330d17442e9c038a584752dde02a87308ebe02e072cb1816f5d8e295b0d01d4b",
+        "Created": "2023-09-04T10:21:28.728491941Z",
+        "Path": "python3",
+        "Args": [
+            "pyls_launcher.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1244,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-09-05T21:11:34.364180232Z",
+            "FinishedAt": "2023-09-05T21:11:24.578769061Z"
+        },
+        "Image": "sha256:254064085a623b2506289cd1c2c74df592a8385ed5d14b5f4a7c0666c46effb0",
+        "ResolvConfPath": "/var/lib/docker/containers/330d17442e9c038a584752dde02a87308ebe02e072cb1816f5d8e295b0d01d4b/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/330d17442e9c038a584752dde02a87308ebe02e072cb1816f5d8e295b0d01d4b/hostname",
+        "HostsPath": "/var/lib/docker/containers/330d17442e9c038a584752dde02a87308ebe02e072cb1816f5d8e295b0d01d4b/hosts",
+        "LogPath": "/var/lib/docker/containers/330d17442e9c038a584752dde02a87308ebe02e072cb1816f5d8e295b0d01d4b/330d17442e9c038a584752dde02a87308ebe02e072cb1816f5d8e295b0d01d4b-json.log",
+        "Name": "/windmill-lsp-1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "windmill_windmill_link",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "windmill_lsp_cache",
+                    "Target": "/root/.cache",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/6c8b914d6ac26e5d6e0dc2e9d0ddf911bb618fb157f0ea895f6c118eb3d82447-init/diff:/var/lib/docker/overlay2/3c4b04fb311abcb2d162cc1cd9c386128a116c986b7316d51292a1e05d4f2428/diff:/var/lib/docker/overlay2/dc58121d992c1aba01d1f41fd7be7e2ade0462de0ec15f8b0ecabb8d7c1ea7d1/diff:/var/lib/docker/overlay2/3b349459e2b28f3991e2d56c8f8f862efc0901d2909ee496cf6a6d65d00d8163/diff:/var/lib/docker/overlay2/9e97814abb999875cef060251dd28ca7bfcf4d2430609c27a23921d60e9327b1/diff:/var/lib/docker/overlay2/b878ae3c391dbfb96cfd88d3993d4253e89a1faef40ccb3f81d786a47c3d4507/diff:/var/lib/docker/overlay2/2c8479369668445f90d43625ec5261df8bb4cfdf501cd883ceb0507bca1428f2/diff:/var/lib/docker/overlay2/419fba9ae7a253aa0435236cc216e30d219a57ff76a340c8b6bd9fbf8bbcce00/diff:/var/lib/docker/overlay2/a70008d3c6d82916c0506190a60f2ebb3bee2327f4f38dd3403f095e1ef146ee/diff:/var/lib/docker/overlay2/b13b3b65118f93e8e14e7db6a61ef914538452c144a3ba1488472e46b20313bc/diff:/var/lib/docker/overlay2/9d727a42589530f975d2dfb21928433910dbd8a50662facaf1bc9dffcca1f3fb/diff:/var/lib/docker/overlay2/13fe660e80f5495bf9d73ba21babf2a9805f2c37c299b777b074aaa5b53b1c1f/diff:/var/lib/docker/overlay2/3b70e94c0c75ef987d4c21b5bf0595d559206135d3cef9ca86f1c1509c54dd95/diff:/var/lib/docker/overlay2/9e80ecc16de4908bcc29b5b74b52e67b45dff7b4bf4ea603efe48a41e0f6b88d/diff:/var/lib/docker/overlay2/9fc71a784355cb82f116acd89c65b90b20575a2c626251c57d5be06d0bc0a6a0/diff:/var/lib/docker/overlay2/4397a93fadacb0b198882957974a5b5d87e893455d980e95fe88a6c131c31249/diff:/var/lib/docker/overlay2/0dae7ab97779468147d8b458c3cb4b401def180e87681593657e894ee81dda7b/diff:/var/lib/docker/overlay2/35bb0951038725b244c8d2525fb81c8f471621d03bfb5c01ba3d7f979b35a0b8/diff:/var/lib/docker/overlay2/f6959cc9f25fe13ff2576d3e6bc226fa7f35947930da225696b28c69e24d1e61/diff:/var/lib/docker/overlay2/cc2de0744717e4a5c9649649fa707345ac7ae71fca51f3aa0b0503184a1278ab/diff:/var/lib/docker/overlay2/ee4a152ffb6aec604a8161f846d7d9ac9b3acd6df99432981d3e4f6600563041/diff:/var/lib/docker/overlay2/a84da6ff5494628394c526408ea48ea9a22c4a4fe60cb2e7ca431149deed4da4/diff:/var/lib/docker/overlay2/f031c306a623222cc50f13a430eee34433d1961d766229ec8f97e8d06ee89ecc/diff:/var/lib/docker/overlay2/630bf5e6dde08ebaf850eb03b687bfa3f20745e023e2056d2cee98d84c5b99f8/diff",
+                "MergedDir": "/var/lib/docker/overlay2/6c8b914d6ac26e5d6e0dc2e9d0ddf911bb618fb157f0ea895f6c118eb3d82447/merged",
+                "UpperDir": "/var/lib/docker/overlay2/6c8b914d6ac26e5d6e0dc2e9d0ddf911bb618fb157f0ea895f6c118eb3d82447/diff",
+                "WorkDir": "/var/lib/docker/overlay2/6c8b914d6ac26e5d6e0dc2e9d0ddf911bb618fb157f0ea895f6c118eb3d82447/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "windmill_lsp_cache",
+                "Source": "/var/lib/docker/volumes/windmill_lsp_cache/_data",
+                "Destination": "/root/.cache",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "330d17442e9c",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "3001/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.3",
+                "PYTHON_PIP_VERSION=22.3.1",
+                "PYTHON_SETUPTOOLS_VERSION=65.5.1",
+                "PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/0d8570dc44796f4369b652222cf176b3db6ac70e/public/get-pip.py",
+                "PYTHON_GET_PIP_SHA256=96461deced5c2a487ddc65207ec5a9cffeca0d34e7af7ea1afc470ff0d746207",
+                "POETRY_HOME=/usr/local",
+                "GOBIN=/usr/local/go/bin"
+            ],
+            "Cmd": [
+                "python3",
+                "pyls_launcher.py"
+            ],
+            "Image": "ghcr.io/windmill-labs/windmill-lsp:latest",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "8b2fb9055a5f682f9796129fd9b2d8eab037209f169b5705e89f80b8b84b8af3",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:254064085a623b2506289cd1c2c74df592a8385ed5d14b5f4a7c0666c46effb0",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "windmill",
+                "com.docker.compose.project.config_files": "/data/compose/6/v1/docker-compose.yml",
+                "com.docker.compose.project.environment_file": "/data/compose/6/v1/stack.env",
+                "com.docker.compose.project.working_dir": "/data/compose/6/v1",
+                "com.docker.compose.service": "lsp",
+                "com.docker.compose.version": "2.20.2",
+                "org.opencontainers.image.created": "2023-09-04T00:55:03.359Z",
+                "org.opencontainers.image.description": "Open-source developer platform to turn scripts into workflows and UIs. Open-source alternative to Airplane and Retool.",
+                "org.opencontainers.image.licenses": "AGPLv3",
+                "org.opencontainers.image.revision": "0a585eccd2e9c03fdadd4fa7482ba8c347d3935c",
+                "org.opencontainers.image.source": "https://github.com/windmill-labs/windmill",
+                "org.opencontainers.image.title": "windmill",
+                "org.opencontainers.image.url": "https://github.com/windmill-labs/windmill",
+                "org.opencontainers.image.version": "1.167.0"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "c2e5aa89f4b470fd4165b9a06ce737e4b73f4c5c4d49f9899b921b39884ea581",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "3001/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/c2e5aa89f4b4",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "windmill_windmill_link": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "windmill-lsp-1",
+                        "lsp",
+                        "330d17442e9c"
+                    ],
+                    "NetworkID": "b9fdb8a0390b09d9138119c866438e13824500dced98acb63e3103c904586ee7",
+                    "EndpointID": "52f3f0d68c9c2dadaeaf283b3961ae83c00cbad444b2324b10f8f290ba1c89f1",
+                    "Gateway": "172.19.0.1",
+                    "IPAddress": "172.19.0.6",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:13:00:06",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

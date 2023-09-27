@@ -1,0 +1,68 @@
+networks:
+  filecloud_default:
+    external: true
+    name: "filecloud_default"
+
+services:
+  filecloud.mongodb:
+
+    command:
+      - "mongod"
+
+    container_name: "filecloud.mongodb"
+
+    entrypoint:
+      - "docker-entrypoint.sh"
+
+    environment:
+      - "mongodb_data_container=/data/db"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - "GOSU_VERSION=1.16"
+      - "JSYAML_VERSION=3.13.1"
+      - "MONGO_PACKAGE=mongodb-org"
+      - "MONGO_REPO=repo.mongodb.org"
+      - "MONGO_MAJOR=6.0"
+      - "MONGO_VERSION=6.0.8"
+      - "HOME=/data/db"
+
+    expose:
+      - "27017/tcp"
+
+    hostname: "d6d6c55a54d4"
+
+    image: "mongo:6.0.8"
+
+    ipc: "private"
+
+    labels:
+      com.docker.compose.config-hash: "e72e9716ac0e9dfa0b387ceae67e539db57340ed97a81ee36425cc9e34401d9a"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: ""
+      com.docker.compose.image: "sha256:fb5fba25b25a267c90549346e49e6d76211eae5bf4ac6943c49eac4d30862232"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "filecloud"
+      com.docker.compose.project.config_files: "/data/compose/11/v1/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/data/compose/11/v1"
+      com.docker.compose.service: "filecloud.mongodb"
+      com.docker.compose.version: "2.20.2"
+      org.opencontainers.image.ref.name: "ubuntu"
+      org.opencontainers.image.version: "22.04"
+
+    logging:
+      driver: "json-file"
+      options: {}
+
+    networks:
+      - "filecloud_default"
+
+    volumes:
+      - "780286ad5e60c9e800606706d01e48f59fb7490bf0f4d0b6b75f5c347787cfd2:/data/configdb"
+      - "filecloud_mongo_database:/data/db"
+
+version: "3.6"
+
+volumes:
+  780286ad5e60c9e800606706d01e48f59fb7490bf0f4d0b6b75f5c347787cfd2:
+    external: true
+  filecloud_mongo_database:
+    external: true

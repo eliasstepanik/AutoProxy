@@ -1,0 +1,93 @@
+networks:
+  proxy_caddy:
+    external: true
+    name: "proxy_caddy"
+  windmill_windmill_link:
+    external: true
+    name: "windmill_windmill_link"
+
+services:
+  windmill-windmill_server-1:
+
+    command:
+      - "windmill"
+
+    container_name: "windmill-windmill_server-1"
+
+    environment:
+      - "DATABASE_URL=postgres://postgres:ejfjefsdjjölwhfgfilh@windmill-db-1/windmill?sslmode=disable"
+      - "BASE_URL=https://windmill.nuv.system"
+      - "RUST_LOG=info"
+      - "NUM_WORKERS=0"
+      - "DISABLE_SERVER=false"
+      - "METRICS_ADDR=false"
+      - "REQUEST_SIZE_LIMIT=50097152"
+      - "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin"
+      - "LANG=C.UTF-8"
+      - "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D"
+      - "PYTHON_VERSION=3.11.4"
+      - "PYTHON_PIP_VERSION=23.1.2"
+      - "PYTHON_SETUPTOOLS_VERSION=65.5.1"
+      - "PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/0d8570dc44796f4369b652222cf176b3db6ac70e/public/get-pip.py"
+      - "PYTHON_GET_PIP_SHA256=96461deced5c2a487ddc65207ec5a9cffeca0d34e7af7ea1afc470ff0d746207"
+      - "GO_PATH=/usr/local/go/bin/go"
+      - "TZ=Etc/UTC"
+
+    expose:
+      - "8000/tcp"
+
+    hostname: "771501689b40"
+
+    image: "ghcr.io/windmill-labs/windmill:main"
+
+    ipc: "private"
+
+    labels:
+      caddy: "windmill.sailehd.systems"
+      caddy.redir_0: "/.well-known/carddav /remote.php/dav 301"
+      caddy.redir_1: "/.well-known/caldav /remote.php/dav 301"
+      caddy.reverse_proxy_0: "/ws/* windmill-lsp-1:3001"
+      caddy.reverse_proxy_1: "/* {{upstreams 8000}}"
+      caddy.tls.dns: "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA"
+      com.docker.compose.config-hash: "095b4beb552c355fcbae87ff932aec9bc06c0fafd2e105b8ca442294c650d649"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: "db:service_healthy:false"
+      com.docker.compose.image: "sha256:c3149c5d17c9cdcad64d14c95a7513e6f7e990d21992a135a281ad6709376ae1"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "windmill"
+      com.docker.compose.project.config_files: "/data/compose/6/v1/docker-compose.yml"
+      com.docker.compose.project.environment_file: "/data/compose/6/v1/stack.env"
+      com.docker.compose.project.working_dir: "/data/compose/6/v1"
+      com.docker.compose.service: "windmill_server"
+      com.docker.compose.version: "2.20.2"
+      org.opencontainers.image.created: "2023-09-04T00:39:42.460Z"
+      org.opencontainers.image.description: "Open-source developer platform to turn\
+        \ scripts into workflows and UIs. Open-source alternative to Airplane and\
+        \ Retool."
+      org.opencontainers.image.licenses: "AGPLv3"
+      org.opencontainers.image.revision: "0a585eccd2e9c03fdadd4fa7482ba8c347d3935c"
+      org.opencontainers.image.source: "https://github.com/windmill-labs/windmill"
+      org.opencontainers.image.title: "windmill"
+      org.opencontainers.image.url: "https://github.com/windmill-labs/windmill"
+      org.opencontainers.image.version: "main"
+
+    logging:
+      driver: "json-file"
+      options: {}
+
+    networks:
+      - "windmill_windmill_link"
+      - "proxy_caddy"
+
+    restart: "unless-stopped"
+
+    volumes:
+      - "windmill_config:/usr/src/app"
+
+    working_dir: "/usr/src/app"
+
+version: "3.6"
+
+volumes:
+  windmill_config:
+    external: true

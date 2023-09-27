@@ -1,0 +1,52 @@
+networks:
+  proxy_caddy:
+    external: true
+    name: "proxy_caddy"
+
+services:
+  proxy-portainer-1:
+    container_name: "proxy-portainer-1"
+    entrypoint:
+      - "/portainer"
+    environment:
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    expose:
+      - "8000/tcp"
+      - "9000/tcp"
+      - "9443/tcp"
+    hostname: "861dd1513171"
+    image: "portainer/portainer-ee:latest"
+    ipc: "private"
+    labels:
+      caddy: "portainer.sailehd.systems"
+      caddy.reverse_proxy: "{{upstreams 9443}}"
+      caddy.reverse_proxy.transport: "http"
+      caddy.reverse_proxy.transport.tls_insecure_skip_verify: ""
+      caddy.tls.dns: "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA"
+      com.docker.compose.config-hash: "8439fbf06fb51c92bb48b841b0450b667e2a7eb2b499a3eab28e37efdde664d4"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: "ddns:service_started:false,caddy:service_started:false"
+      com.docker.compose.image: "sha256:a34f673ad15b82ce750fdeed269edf29708787b08cf516e8239d7721b3d72b7d"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "proxy"
+      com.docker.compose.project.config_files: "/root/Proxy/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/root/Proxy"
+      com.docker.compose.service: "portainer"
+      com.docker.compose.version: "2.20.2"
+      io.portainer.server: "true"
+    logging:
+      driver: "json-file"
+      options: {}
+    networks:
+      - "proxy_caddy"
+    restart: "unless-stopped"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "proxy_portainer_data:/data"
+    working_dir: "/"
+
+version: "3.6"
+
+volumes:
+  proxy_portainer_data:
+    external: true

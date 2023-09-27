@@ -1,0 +1,249 @@
+[
+    {
+        "Id": "f2b8bb4c2a2612daa9479328eecdbe0893b9c8f6eea68dd6cfb9963cfb5d3772",
+        "Created": "2023-09-05T22:00:03.752208588Z",
+        "Path": "bash",
+        "Args": [
+            "/usr/local/bin/init.sh"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 101350,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-09-05T22:00:14.766769801Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:0e24a7ebb56167aac91c0bac577c6dfb0bee117b90e18a15edd176394262fede",
+        "ResolvConfPath": "/var/lib/docker/containers/f2b8bb4c2a2612daa9479328eecdbe0893b9c8f6eea68dd6cfb9963cfb5d3772/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/f2b8bb4c2a2612daa9479328eecdbe0893b9c8f6eea68dd6cfb9963cfb5d3772/hostname",
+        "HostsPath": "/var/lib/docker/containers/f2b8bb4c2a2612daa9479328eecdbe0893b9c8f6eea68dd6cfb9963cfb5d3772/hosts",
+        "LogPath": "/var/lib/docker/containers/f2b8bb4c2a2612daa9479328eecdbe0893b9c8f6eea68dd6cfb9963cfb5d3772/f2b8bb4c2a2612daa9479328eecdbe0893b9c8f6eea68dd6cfb9963cfb5d3772-json.log",
+        "Name": "/filecloud.server",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/subvol-1000-disk-0/cloud:/var/clouddata:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "c76f20c472c8e3f1f49ce9e97090d5b713ad95eba039b8322dfd5e258d2f8f44",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "filecloud_var_html",
+                    "Target": "/var/www/html",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/5284be87d8adf9addbe622023c6778e3524a6b10b590c0038764bccc27e46d2b-init/diff:/var/lib/docker/overlay2/f1bc14a483680fb715203de0de5d3333fb2fc489e331112179d1cb414e7784db/diff:/var/lib/docker/overlay2/9f3aa90d12d00e7d83c83c031cc80adf473a1205d4640d9f6596ff793131100f/diff:/var/lib/docker/overlay2/e349adf5f8bd464ce871df6251e015784b78e49069afa5487ce2d558d9aa94fa/diff:/var/lib/docker/overlay2/90ec77195f417d8ece2f1264eff45b72f7ca37b851cd0f062cfd8602ec643cb7/diff:/var/lib/docker/overlay2/62cc7affaea8e9eb4037b0cfb122ee39cf32cb1f50fe8d2062974c6623580068/diff:/var/lib/docker/overlay2/d94fca12705d8dcf0a76486db007e0c1351be208ce43c67bf91cfccfed5d06c9/diff:/var/lib/docker/overlay2/d461bd550a74ac2a7c857f622af8b6dfaf7e184dcfe0f833a6a24e7894680472/diff:/var/lib/docker/overlay2/50b6a080172e0d0a0deb651f07df71eb6f7a492201d7f844ae8936c0d5fd1bd6/diff:/var/lib/docker/overlay2/742ced07672dfe4693bc92d826469c970c1b32fbc75761fece046f885c7a944b/diff:/var/lib/docker/overlay2/1ca0e507e665a0aae8f679456b830d483f3bbbaac2da380870f096dce7d84f6f/diff:/var/lib/docker/overlay2/37755f5edafcc3a95e297cebffdfbadae8a5043ede952294f4d452f378af13aa/diff:/var/lib/docker/overlay2/48b77660cfdba837f24c6c089ed66351bcb69e985f02ee00a66622d9eea7adda/diff:/var/lib/docker/overlay2/a674c0204ffea6e0f071bff8380ffa77565f55ee3ee9bcc0bd522b872b836ef0/diff:/var/lib/docker/overlay2/7bd0e397006dae124a67bced1065a84e943d5d786d9b255d8331e5e692f71bd1/diff:/var/lib/docker/overlay2/e1307d7d6b65a0619561bdf97ebed9ad36d638f489f174c783820af925d64b93/diff:/var/lib/docker/overlay2/473dd28047bd42db9b5446ac2f2c86e2d3eede2f8dd6b3b00defba5b3cac4bc4/diff:/var/lib/docker/overlay2/03249bea4f1ccb21ec546f9c114677c9c77cdcb7053ebc61f57eeaed629bda77/diff:/var/lib/docker/overlay2/6ebdda5ffeb0bd8db019013d93f82cd2b9246ef30e446ded42d3e5b947cf65fc/diff:/var/lib/docker/overlay2/c55ddcda3d97693a4557e281dd82542c3c01ef4255b52b08a1b014b6f73570ad/diff:/var/lib/docker/overlay2/8e7b53f2eb4c05b0c689fad33d57a82150e698a42ecc0f7592955fbc49912177/diff:/var/lib/docker/overlay2/c35e69154f5ea195166131e23c5fd34b2cef3a376cfb2aca89be3ee480591ac1/diff:/var/lib/docker/overlay2/09f45c44a9a3c9f987d4950e9376f0c6bb0d0a650796912eccd44480b1b289a6/diff:/var/lib/docker/overlay2/0540019b891e946b6e6d3042e2880f16ae609f2a66a6cc00ce293bc4af70970c/diff:/var/lib/docker/overlay2/8aea7f7b9d9df3419f7427d7922be00f9bcdcd0c4a97efbffb7d7222a2e7958c/diff:/var/lib/docker/overlay2/3c628170740d523f1cd07ff3d4747a4e8ebdfaca9e2adeb95c7a6421a717cd5d/diff:/var/lib/docker/overlay2/bb4643ff919003f529b4ab95370bd5ef2663a82332b75d6bdbd1de51c3fbc7e3/diff:/var/lib/docker/overlay2/29035b01d3d1be9b26ca91d812e810700861ba60af294776bd7c14e3382e5171/diff:/var/lib/docker/overlay2/a57c52e4e13cd837919c7bd2fd63c939913e006914a3c94d5adb0fd29d214bea/diff:/var/lib/docker/overlay2/5804965be035e15cdb87f3c5eb42a60cdacd1c7303ab221fc5d8f646d361d1e9/diff:/var/lib/docker/overlay2/f0e4ffb7b493497ea1057ac49459755dc0b8fe579f1fa7cc4642a400f4c5a17f/diff:/var/lib/docker/overlay2/b8d6deb104c79aceea70349e1667eea4e58f06e9c1bac6b52afbc8b17bceb55f/diff:/var/lib/docker/overlay2/8fa3caa4f2b8b8a8f7049944a3e61a430b61661e93cd42ec8e60b075986d5712/diff:/var/lib/docker/overlay2/1ddd28ddaf765b05318be90366a7d6000859afee17771d2bfbee26b517120c9d/diff:/var/lib/docker/overlay2/35ddbf35b825e61a21e6ddd485d042e658e5261e8ee655f6e2eacf70bf11ce81/diff:/var/lib/docker/overlay2/b416100bd4129d427012d927f764f3b8490c913e8d3ada1efea52db59a1b2c71/diff:/var/lib/docker/overlay2/721c14bdbf4f50da22fd9f4e674d5885692d23e35e2a1e455c38bbf1807f961b/diff:/var/lib/docker/overlay2/fadb070560c32e0c5c78d25ff8cd5b85873231262da092766c7f117699a1acbd/diff:/var/lib/docker/overlay2/7f1c91daa5e79f07100508c0304a12c4713c18325c22b4ad402a0d8953e5cb66/diff:/var/lib/docker/overlay2/ea09f567c860f6111568aefc544882e4c65cd8a3ecc7cc885690f49dff51a7bd/diff:/var/lib/docker/overlay2/74735cc784498b646714f2ecc351e92bae1963bba402564b1ea92766cc7cbf7f/diff:/var/lib/docker/overlay2/ea6d613190aabc684d14f335014c18dfd0c3dd15690ea7082bf9eba691a76a06/diff:/var/lib/docker/overlay2/1b7b46c91b5b7a17084d88a211120734a81ce82e51a5b915505b82289689111b/diff:/var/lib/docker/overlay2/5591db15c805c53b5e6854679f3861eb9d685217a4753448628ec0dbbc8dc470/diff:/var/lib/docker/overlay2/af9cb8c22fe7969d798b342d2e96eda4c88e9a3f756976146e2a15b8315a5938/diff:/var/lib/docker/overlay2/33f11d85fb646b0b72c79848c64b78dacdcdd8c91d7a620cca013882786b7c01/diff:/var/lib/docker/overlay2/f228b38ca5a1adeb5cbe2cf55b66bd3bc3d8ad8ba1d50f736b302d6348a7c078/diff:/var/lib/docker/overlay2/7a44ca52790e4030e860218cedce407572882e07ac766dcc0ec08e8ca0b1cd7e/diff:/var/lib/docker/overlay2/5d0e9389e29127c55e2e81f06d4b9ba30d500f73823cf58753293641b2e3e5ee/diff:/var/lib/docker/overlay2/a9b3e7819d78f198742491a8cb3307c54e2dcfa4f7362d98e56d103bd50b9912/diff:/var/lib/docker/overlay2/6bdc2fc6d2d404d7774e3b656622667fe7a52aff8b3cd218eb86c241ace62d8b/diff:/var/lib/docker/overlay2/57afa4d80796993496755d728d8ff627da2bfed2bfedc6be2c7811479b49cfe3/diff:/var/lib/docker/overlay2/800f5d15bb15305a3ae75e353106854f5aa7ef3bc6173711e5a30be4e8f90994/diff:/var/lib/docker/overlay2/15b1f6e83dd22dd5ecc9cc2088ab13a9a3a2f9494960f7807686cfae9a77b331/diff:/var/lib/docker/overlay2/a1a0bbc24fc6591b617440955bff27b13893dc7eb0adb687ced297bbcb8aa9b4/diff:/var/lib/docker/overlay2/9539a0abdf8494f5104c9541283f1d460626205366c993a1c813d0ea3ef85f2e/diff:/var/lib/docker/overlay2/bcd2f37ecd3cdd9064b8564ae9ae7acd47f5a5ff2c0ec9093a41bc2d0c7f2eb1/diff:/var/lib/docker/overlay2/1271b14a3737b46c04148ec126a5503fe323214e5b2a6afe83c58ba45be26834/diff:/var/lib/docker/overlay2/2df76403cb24517d3100ec6c7fee69a7f3ffd4a65c78e1efdc69bbe4c9607bed/diff:/var/lib/docker/overlay2/973fabb2ef4a4cb986664bc1db65183b946507b10542c5faff420b0dbddf1b9e/diff:/var/lib/docker/overlay2/c86db5da05f331235d78fb50265cb7fd712558f066ffbe7912aebd7df84610c0/diff:/var/lib/docker/overlay2/af6c1daa2a886a9bb048c7deb4a69878bc1cbc6973d83745060c2dcfee365a4b/diff:/var/lib/docker/overlay2/836088b361b425fd4155d1f2cc04d1f7d9ffefcc7a28de1241e0450ecf2eab98/diff:/var/lib/docker/overlay2/c199fe744ba521be2b2f76fbc6c093fb3f3aa76770612fde8cd499b21abb72de/diff:/var/lib/docker/overlay2/602b9406647bb1d0b19fdae7584a97e7c546f1e926e215d63ab298e8a3495da1/diff:/var/lib/docker/overlay2/a51ec27957986eb8db9df79051ba28d0df8fe8887b17818d9d3732b057f56e33/diff:/var/lib/docker/overlay2/e37e3b859b46405659cc827256a0174d4c1263c220641dce35489407757f236b/diff:/var/lib/docker/overlay2/7ad0ed3546bab5c0372f3fd17e3efe7cce7e73a05d111375a3669d0587b3aba6/diff:/var/lib/docker/overlay2/b0bca9fc8e137b37c6f36235040960d640d25e5fd36f241314fc3a406e1196b8/diff:/var/lib/docker/overlay2/d63ecbbe7be91aa89f10fe53b3abc51135f911722dfcda406a16a7d520516737/diff:/var/lib/docker/overlay2/0ef1b82d016839f4b60ba2a9e2bd47b9fab661b592e4bf1eae6edf30101721ba/diff:/var/lib/docker/overlay2/6192ac68b74785adeeb02d324b72937a7c073956af9ca6221e128a5957462118/diff:/var/lib/docker/overlay2/3f66e6f2500c4fcb429802e3906d498f1eca3b4e471ac9f5c54201676473fd01/diff:/var/lib/docker/overlay2/21127f0b8492a5887e3ec4fac1fee88b824c8288016e954dc7a2ef7b8d1239ab/diff:/var/lib/docker/overlay2/8c59372cbdc7b14e2098165566b944eb987b85781924de8f03bbadb0b60810b2/diff:/var/lib/docker/overlay2/e6757a01b990c7ee2bc0ee4098c898972373576ceafa86ed7a12b7b32d2e040d/diff:/var/lib/docker/overlay2/27e3f3dce2dd5527985bfd79e350bbc83b69b8c4e6fe107adc80b7b016fd07f5/diff:/var/lib/docker/overlay2/5ecf061292333ee30e92ace4236c49f8eff6e741a8748ad13f7fda6d7a0f4843/diff:/var/lib/docker/overlay2/9ddcb3c8d0d857674b5f56768494bca3c34feb97f43b340d42dde3937b19f9e3/diff:/var/lib/docker/overlay2/3f78b7fb356b2e099948678472c3146292a1a7fe3ee19d40229914f180e23c79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/5284be87d8adf9addbe622023c6778e3524a6b10b590c0038764bccc27e46d2b/merged",
+                "UpperDir": "/var/lib/docker/overlay2/5284be87d8adf9addbe622023c6778e3524a6b10b590c0038764bccc27e46d2b/diff",
+                "WorkDir": "/var/lib/docker/overlay2/5284be87d8adf9addbe622023c6778e3524a6b10b590c0038764bccc27e46d2b/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/subvol-1000-disk-0/cloud",
+                "Destination": "/var/clouddata",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "volume",
+                "Name": "filecloud_var_html",
+                "Source": "/var/lib/docker/volumes/filecloud_var_html/_data",
+                "Destination": "/var/www/html",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "f2b8bb4c2a26",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": null,
+            "Image": "filecloud/filecloudserver23.1:latest",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "bash",
+                "/usr/local/bin/init.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "caddy": "cloud.sailehd.systems",
+                "caddy.reverse_proxy": "{{upstreams 443}}",
+                "caddy.reverse_proxy.transport": "http",
+                "caddy.reverse_proxy.transport.tls_insecure_skip_verify": "",
+                "caddy.tls.dns": "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA",
+                "com.docker.compose.config-hash": "94fa7f0e1a6ba215983433177bd1f9d143127ce8c53d430d89969288412e0951",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "filecloud.mongodb:service_started:false,filecloud.preview:service_started:false",
+                "com.docker.compose.image": "sha256:0e24a7ebb56167aac91c0bac577c6dfb0bee117b90e18a15edd176394262fede",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "filecloud",
+                "com.docker.compose.project.config_files": "/data/compose/11/v3/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/data/compose/11/v3",
+                "com.docker.compose.replace": "bf8da4f15cb366e3beac13872e1aa8fd519dbbcf44598c98e54b6f538da01043",
+                "com.docker.compose.service": "filecloud.server",
+                "com.docker.compose.version": "2.20.2",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "559f9da160136b3d1a534658ee708f6eb7fbb648aa34365e7daa315524edb329",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/559f9da16013",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "proxy_caddy": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "filecloud.server",
+                        "filecloud.server",
+                        "f2b8bb4c2a26"
+                    ],
+                    "NetworkID": "c76f20c472c8e3f1f49ce9e97090d5b713ad95eba039b8322dfd5e258d2f8f44",
+                    "EndpointID": "a78fcf1bad9e13c0ecab3064e991c967c47c2f03945742af10b70786dcb1478a",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.10",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:0a",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

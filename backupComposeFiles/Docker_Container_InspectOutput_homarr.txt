@@ -1,0 +1,284 @@
+[
+    {
+        "Id": "251243f1ce4327895265cee308f7060862fe1e13af62f693d6dabae17fc06d1c",
+        "Created": "2023-09-04T10:26:01.880582769Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "node",
+            "server.js"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1243,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-09-05T21:11:34.806749467Z",
+            "FinishedAt": "2023-09-05T21:11:14.755256098Z"
+        },
+        "Image": "sha256:5e4242dd37c05e76a553ad12aa5c1511505c320787348043b9e562046be922f5",
+        "ResolvConfPath": "/var/lib/docker/containers/251243f1ce4327895265cee308f7060862fe1e13af62f693d6dabae17fc06d1c/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/251243f1ce4327895265cee308f7060862fe1e13af62f693d6dabae17fc06d1c/hostname",
+        "HostsPath": "/var/lib/docker/containers/251243f1ce4327895265cee308f7060862fe1e13af62f693d6dabae17fc06d1c/hosts",
+        "LogPath": "/var/lib/docker/containers/251243f1ce4327895265cee308f7060862fe1e13af62f693d6dabae17fc06d1c/251243f1ce4327895265cee308f7060862fe1e13af62f693d6dabae17fc06d1c-json.log",
+        "Name": "/homarr",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/var/run/docker.sock:/var/run/docker.sock:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "c76f20c472c8e3f1f49ce9e97090d5b713ad95eba039b8322dfd5e258d2f8f44",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "homarr_config",
+                    "Target": "/app/data/configs",
+                    "VolumeOptions": {}
+                },
+                {
+                    "Type": "volume",
+                    "Source": "homarr_icons",
+                    "Target": "/app/public/icons",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/4aa7d004326414f9f4db375e3217e567fe85f2b85898bb16a937e598aeedac25-init/diff:/var/lib/docker/overlay2/b6668df8f77c65108c6cb6e92655d7f51227d66eca9b8ec3579a18e961bd7fe7/diff:/var/lib/docker/overlay2/ed2978c533eee80ef160251d5643b22357373704d1fb003bec8c22ae6d6cc2f4/diff:/var/lib/docker/overlay2/0edbdbbf8fc3817b244fada8a0c3e1b437a569b998250f4eb702dd4173ae2ec2/diff:/var/lib/docker/overlay2/0e14e2ac5220f20bc31ebb55168ac29e84be8d3631ccb2a523a239ef493b9a16/diff:/var/lib/docker/overlay2/461886a6eea7ee40a0be91a812e4b5612e59eb0d910997b21b4b6bb61b21cb9e/diff:/var/lib/docker/overlay2/7ad6707a38db1297376a6f14daa7c32210d16838ea71f2be269736857fc6e228/diff:/var/lib/docker/overlay2/105af0b6db4d211d257871fda507ef551429de173e139b3305b20e3c0f948d88/diff:/var/lib/docker/overlay2/db3cfb798cc7dcc1caee18d38bbe7a67033ff886e7c280dfd4a6e0c7c96bfbdc/diff:/var/lib/docker/overlay2/614b0ec0d27aa3eb569129708ffb252d97df65180930104f75e0acdfac196277/diff:/var/lib/docker/overlay2/e20ab5734aeb66b30da7a49fe99045b920e641cf648bc7581a2d322f2f806670/diff",
+                "MergedDir": "/var/lib/docker/overlay2/4aa7d004326414f9f4db375e3217e567fe85f2b85898bb16a937e598aeedac25/merged",
+                "UpperDir": "/var/lib/docker/overlay2/4aa7d004326414f9f4db375e3217e567fe85f2b85898bb16a937e598aeedac25/diff",
+                "WorkDir": "/var/lib/docker/overlay2/4aa7d004326414f9f4db375e3217e567fe85f2b85898bb16a937e598aeedac25/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/var/run/docker.sock",
+                "Destination": "/var/run/docker.sock",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "volume",
+                "Name": "homarr_config",
+                "Source": "/var/lib/docker/volumes/homarr_config/_data",
+                "Destination": "/app/data/configs",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "homarr_icons",
+                "Source": "/var/lib/docker/volumes/homarr_icons/_data",
+                "Destination": "/app/public/icons",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "251243f1ce43",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "7575/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "DISABLE_EDIT_MODE=true",
+                "EDIT_MODE_PASSWORD=OZTfM9ihU9^p+85H",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NODE_VERSION=20.5.1",
+                "YARN_VERSION=1.22.19",
+                "NEXT_TELEMETRY_DISABLED=1",
+                "NODE_ENV=production",
+                "NODE_OPTIONS=--no-experimental-fetch",
+                "PORT=7575"
+            ],
+            "Cmd": [
+                "node",
+                "server.js"
+            ],
+            "Image": "ghcr.io/ajnart/homarr:latest",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "caddy": "sailehd.systems",
+                "caddy.reverse_proxy": "{{upstreams 7575}}",
+                "caddy.tls.dns": "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA",
+                "com.docker.compose.config-hash": "663423e696f93c8e50bfa0346d6842406375d1075259ce78982ca13134880721",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:5e4242dd37c05e76a553ad12aa5c1511505c320787348043b9e562046be922f5",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "homarr",
+                "com.docker.compose.project.config_files": "/data/compose/3/v3/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/data/compose/3/v3",
+                "com.docker.compose.service": "app",
+                "com.docker.compose.version": "2.20.2",
+                "org.opencontainers.image.created": "2023-08-13T05:54:56.095Z",
+                "org.opencontainers.image.description": "Customizable browser's home page to interact with your homeserver's Docker containers (e.g. Sonarr/Radarr)",
+                "org.opencontainers.image.licenses": "MIT",
+                "org.opencontainers.image.revision": "93c4b9a9e3423e4b0a674f75f8cce173820d9b57",
+                "org.opencontainers.image.source": "https://github.com/ajnart/homarr",
+                "org.opencontainers.image.title": "homarr",
+                "org.opencontainers.image.url": "https://github.com/ajnart/homarr",
+                "org.opencontainers.image.version": "0.13.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "d2c7ca1c5398c68f9eb0b0dcdaf5379749f101e7e110a647d3db60b3f0843542",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "7575/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/d2c7ca1c5398",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "proxy_caddy": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "homarr",
+                        "app",
+                        "251243f1ce43"
+                    ],
+                    "NetworkID": "c76f20c472c8e3f1f49ce9e97090d5b713ad95eba039b8322dfd5e258d2f8f44",
+                    "EndpointID": "f4fddf908636e7af832d2de7fc804b00160053e3e5d2ec0a51da0cd56921756e",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.6",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:06",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

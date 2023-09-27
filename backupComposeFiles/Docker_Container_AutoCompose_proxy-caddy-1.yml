@@ -1,0 +1,74 @@
+networks:
+  proxy_caddy:
+    external: true
+    name: "proxy_caddy"
+
+services:
+  proxy-caddy-1:
+
+    command:
+      - "caddy"
+      - "docker-proxy"
+
+    container_name: "proxy-caddy-1"
+
+    environment:
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - "CADDY_VERSION=v2.7.4"
+      - "XDG_CONFIG_HOME=/config"
+      - "XDG_DATA_HOME=/data"
+
+    hostname: "cbb6582da237"
+
+    image: "saile2204/caddy-proxy:latest"
+
+    ipc: "private"
+
+    labels:
+      com.docker.compose.config-hash: "fdc5c4843ee2d4109573be216598474c84dcd906409615048376352b1ee11acf"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: "ddns:service_started:false"
+      com.docker.compose.image: "sha256:09f9ee9efdbea49e501ea4804ac3b720497a3e703d362f6e85ca68b8bc25a2ac"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "proxy"
+      com.docker.compose.project.config_files: "/root/Proxy/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/root/Proxy"
+      com.docker.compose.service: "caddy"
+      com.docker.compose.version: "2.20.2"
+      org.opencontainers.image.description: "a powerful, enterprise-ready, open source\
+        \ web server with automatic HTTPS written in Go"
+      org.opencontainers.image.documentation: "https://caddyserver.com/docs"
+      org.opencontainers.image.licenses: "Apache-2.0"
+      org.opencontainers.image.source: "https://github.com/caddyserver/caddy-docker"
+      org.opencontainers.image.title: "Caddy"
+      org.opencontainers.image.url: "https://caddyserver.com"
+      org.opencontainers.image.vendor: "Light Code Labs"
+      org.opencontainers.image.version: "v2.7.4"
+
+    logging:
+      driver: "json-file"
+      options: {}
+
+    networks:
+      - "proxy_caddy"
+
+    ports:
+      - "443:443/tcp"
+      - "80:80/tcp"
+
+    restart: "unless-stopped"
+
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "proxy_caddy_config:/config"
+      - "proxy_caddy_data:/data"
+
+    working_dir: "/srv"
+
+version: "3.6"
+
+volumes:
+  proxy_caddy_config:
+    external: true
+  proxy_caddy_data:
+    external: true

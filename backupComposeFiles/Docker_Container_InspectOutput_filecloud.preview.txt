@@ -1,0 +1,250 @@
+[
+    {
+        "Id": "7738987c64a0432c966eff82b5b15a9990b905fe4fe869d7eaa764cce810b202",
+        "Created": "2023-09-05T21:33:02.568477783Z",
+        "Path": "/opt/libreoffice/init.sh",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 45045,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-09-05T21:33:05.668411354Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:fec248ba82d66331c6311a494ef8a208264d360b28e3422b166463e96c2f09ca",
+        "ResolvConfPath": "/var/lib/docker/containers/7738987c64a0432c966eff82b5b15a9990b905fe4fe869d7eaa764cce810b202/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/7738987c64a0432c966eff82b5b15a9990b905fe4fe869d7eaa764cce810b202/hostname",
+        "HostsPath": "/var/lib/docker/containers/7738987c64a0432c966eff82b5b15a9990b905fe4fe869d7eaa764cce810b202/hosts",
+        "LogPath": "/var/lib/docker/containers/7738987c64a0432c966eff82b5b15a9990b905fe4fe869d7eaa764cce810b202/7738987c64a0432c966eff82b5b15a9990b905fe4fe869d7eaa764cce810b202-json.log",
+        "Name": "/filecloud.preview",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/subvol-1000-disk-0/cloud:/var/clouddata:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "filecloud_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "filecloud_var_html",
+                    "Target": "/var/www/html",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/c0b3780e37fd8ee99f38a329b407af101a93f1f2c1bd1aaf45cfe28bee4e3363-init/diff:/var/lib/docker/overlay2/3f8ea0ceb4d052656dd07363e8bc61dbbfc4aaa72fbbff7d1773b0a37fd51278/diff:/var/lib/docker/overlay2/cb57efc93bef2f1acf30f9379e9d0ec453adacb8651127c6deb50d9f3a5992da/diff:/var/lib/docker/overlay2/e5160f7ddcfbf5247f73b74430b797004fc95d512bd86a346a6fd369476df885/diff:/var/lib/docker/overlay2/2baf9b9ad95fd8480d017798c98ad2c90dd98ef87ac1d68a95875345f07db1ae/diff:/var/lib/docker/overlay2/fea548126474a395c5e89fdd74299f69954aebac73cf2169c3c1a04fddac165a/diff:/var/lib/docker/overlay2/730d69a75b099108d38f76e6b44f33d976035ef66e72e7b9a84dbdb18f903468/diff:/var/lib/docker/overlay2/e57f0c371301bf2ee7ffe9161d900b7f5de21276a884b2f47523b34d581fe074/diff:/var/lib/docker/overlay2/8c61293010e0bba6df9d16609c7c07826baa52b77de0a83fdb2733b560db1b35/diff:/var/lib/docker/overlay2/8a14bc791b46a29a0eec7c7b41137e18d24706ae84dc3df7775a173698f1ae4c/diff:/var/lib/docker/overlay2/ae0752cce161b8ec803bfc6ff168438026481cd2b2e92650bd2a09bc19d4f040/diff:/var/lib/docker/overlay2/bffc695e689ce9b356c4c41700ae763c15b778c176bd49774f05c9da9ad2fc67/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c0b3780e37fd8ee99f38a329b407af101a93f1f2c1bd1aaf45cfe28bee4e3363/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c0b3780e37fd8ee99f38a329b407af101a93f1f2c1bd1aaf45cfe28bee4e3363/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c0b3780e37fd8ee99f38a329b407af101a93f1f2c1bd1aaf45cfe28bee4e3363/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "filecloud_var_html",
+                "Source": "/var/lib/docker/volumes/filecloud_var_html/_data",
+                "Destination": "/var/www/html",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "9a7d2ff9f5bd137a2a5e0e6d1d850cfac4bcd15e8cff893fd93696325b0400c9",
+                "Source": "/var/lib/docker/volumes/9a7d2ff9f5bd137a2a5e0e6d1d850cfac4bcd15e8cff893fd93696325b0400c9/_data",
+                "Destination": "/tmp",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/subvol-1000-disk-0/cloud",
+                "Destination": "/var/clouddata",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "7738987c64a0",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": null,
+            "Image": "filecloud/filecloudpreview22.1:latest",
+            "Volumes": {
+                "/tmp": {}
+            },
+            "WorkingDir": "/tmp",
+            "Entrypoint": [
+                "/opt/libreoffice/init.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "5f447b8ada6718d726c80def43b22b1c42808bfb570c734bb80f6c92aec00726",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:fec248ba82d66331c6311a494ef8a208264d360b28e3422b166463e96c2f09ca",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "filecloud",
+                "com.docker.compose.project.config_files": "/data/compose/11/v1/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/data/compose/11/v1",
+                "com.docker.compose.service": "filecloud.preview",
+                "com.docker.compose.version": "2.20.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "4d07d327a30cf1e5a6e3572ce110ef7ed64a3ebe9ab210f6e8c3972a90218c50",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/4d07d327a30c",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "filecloud_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "filecloud.preview",
+                        "filecloud.preview",
+                        "7738987c64a0"
+                    ],
+                    "NetworkID": "e16dac509c26785a15cc8e330b8108a7a15d314bae05af6ce74aa1452cdc0723",
+                    "EndpointID": "65557cb9a000a2ed180a2983b8685917e1bedb3e3d46bf7d39dfa81ef7bbcdd3",
+                    "Gateway": "172.21.0.1",
+                    "IPAddress": "172.21.0.4",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:15:00:04",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

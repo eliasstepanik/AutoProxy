@@ -1,0 +1,75 @@
+networks:
+  windmill_windmill_link:
+    external: true
+    name: "windmill_windmill_link"
+
+services:
+  windmill-lsp-1:
+
+    command:
+      - "python3"
+      - "pyls_launcher.py"
+
+    container_name: "windmill-lsp-1"
+
+    environment:
+      - "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin"
+      - "LANG=C.UTF-8"
+      - "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D"
+      - "PYTHON_VERSION=3.11.3"
+      - "PYTHON_PIP_VERSION=22.3.1"
+      - "PYTHON_SETUPTOOLS_VERSION=65.5.1"
+      - "PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/0d8570dc44796f4369b652222cf176b3db6ac70e/public/get-pip.py"
+      - "PYTHON_GET_PIP_SHA256=96461deced5c2a487ddc65207ec5a9cffeca0d34e7af7ea1afc470ff0d746207"
+      - "POETRY_HOME=/usr/local"
+      - "GOBIN=/usr/local/go/bin"
+
+    expose:
+      - "3001/tcp"
+
+    hostname: "330d17442e9c"
+
+    image: "ghcr.io/windmill-labs/windmill-lsp:latest"
+
+    ipc: "private"
+
+    labels:
+      com.docker.compose.config-hash: "8b2fb9055a5f682f9796129fd9b2d8eab037209f169b5705e89f80b8b84b8af3"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: ""
+      com.docker.compose.image: "sha256:254064085a623b2506289cd1c2c74df592a8385ed5d14b5f4a7c0666c46effb0"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "windmill"
+      com.docker.compose.project.config_files: "/data/compose/6/v1/docker-compose.yml"
+      com.docker.compose.project.environment_file: "/data/compose/6/v1/stack.env"
+      com.docker.compose.project.working_dir: "/data/compose/6/v1"
+      com.docker.compose.service: "lsp"
+      com.docker.compose.version: "2.20.2"
+      org.opencontainers.image.created: "2023-09-04T00:55:03.359Z"
+      org.opencontainers.image.description: "Open-source developer platform to turn\
+        \ scripts into workflows and UIs. Open-source alternative to Airplane and\
+        \ Retool."
+      org.opencontainers.image.licenses: "AGPLv3"
+      org.opencontainers.image.revision: "0a585eccd2e9c03fdadd4fa7482ba8c347d3935c"
+      org.opencontainers.image.source: "https://github.com/windmill-labs/windmill"
+      org.opencontainers.image.title: "windmill"
+      org.opencontainers.image.url: "https://github.com/windmill-labs/windmill"
+      org.opencontainers.image.version: "1.167.0"
+
+    logging:
+      driver: "json-file"
+      options: {}
+
+    networks:
+      - "windmill_windmill_link"
+
+    restart: "unless-stopped"
+
+    volumes:
+      - "windmill_lsp_cache:/root/.cache"
+
+version: "3.6"
+
+volumes:
+  windmill_lsp_cache:
+    external: true

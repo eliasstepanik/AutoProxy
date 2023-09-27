@@ -1,0 +1,49 @@
+networks:
+  proxy_caddy:
+    external: true
+    name: "proxy_caddy"
+
+services:
+  filecloud.server:
+    container_name: "filecloud.server"
+    entrypoint:
+      - "bash"
+      - "/usr/local/bin/init.sh"
+    environment:
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    hostname: "f2b8bb4c2a26"
+    image: "filecloud/filecloudserver23.1:latest"
+    ipc: "private"
+    labels:
+      caddy: "cloud.sailehd.systems"
+      caddy.reverse_proxy: "{{upstreams 443}}"
+      caddy.reverse_proxy.transport: "http"
+      caddy.reverse_proxy.transport.tls_insecure_skip_verify: ""
+      caddy.tls.dns: "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA"
+      com.docker.compose.config-hash: "94fa7f0e1a6ba215983433177bd1f9d143127ce8c53d430d89969288412e0951"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: "filecloud.mongodb:service_started:false,filecloud.preview:service_started:false"
+      com.docker.compose.image: "sha256:0e24a7ebb56167aac91c0bac577c6dfb0bee117b90e18a15edd176394262fede"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "filecloud"
+      com.docker.compose.project.config_files: "/data/compose/11/v3/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/data/compose/11/v3"
+      com.docker.compose.replace: "bf8da4f15cb366e3beac13872e1aa8fd519dbbcf44598c98e54b6f538da01043"
+      com.docker.compose.service: "filecloud.server"
+      com.docker.compose.version: "2.20.2"
+      org.opencontainers.image.ref.name: "ubuntu"
+      org.opencontainers.image.version: "22.04"
+    logging:
+      driver: "json-file"
+      options: {}
+    networks:
+      - "proxy_caddy"
+    volumes:
+      - "/subvol-1000-disk-0/cloud:/var/clouddata"
+      - "filecloud_var_html:/var/www/html"
+
+version: "3.6"
+
+volumes:
+  filecloud_var_html:
+    external: true

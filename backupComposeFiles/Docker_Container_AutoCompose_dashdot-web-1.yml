@@ -1,0 +1,77 @@
+networks:
+  proxy_caddy:
+    external: true
+    name: "proxy_caddy"
+
+services:
+  dashdot-web-1:
+
+    command:
+      - "yarn"
+      - "start"
+
+    container_name: "dashdot-web-1"
+
+    entrypoint:
+      - "docker-entrypoint.sh"
+
+    environment:
+      - "DASHDOT_ENABLE_CPU_TEMPS=true"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - "NODE_VERSION=18.17.1"
+      - "YARN_VERSION=1.22.19"
+      - "DASHDOT_RUNNING_IN_DOCKER=true"
+
+    expose:
+      - "3001/tcp"
+
+    hostname: "0ee38bd73b28"
+
+    image: "mauricenino/dashdot:latest"
+
+    ipc: "private"
+
+    labels:
+      caddy: "dashdot.sailehd.systems"
+      caddy.reverse_proxy: "{{upstreams 3001}}"
+      caddy.tls.dns: "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA"
+      com.docker.compose.config-hash: "06f0a217324a531e1c2dba62e2e66cf1d8513332f84d35552e84e40b315a97e4"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: ""
+      com.docker.compose.image: "sha256:bd7a05d3171eee72d5379ca06e577402266133ba4e6e387d3036cb07626044d1"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "dashdot"
+      com.docker.compose.project.config_files: "/data/compose/1/v2/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/data/compose/1/v2"
+      com.docker.compose.service: "web"
+      com.docker.compose.version: "2.20.2"
+      org.opencontainers.image.authors: "\"MauriceNino <mauriceprivat98@gmail.com>\""
+      org.opencontainers.image.created: "2023-08-23T21:44:19.282Z"
+      org.opencontainers.image.description: "\"dash. - a modern server dashboard\""
+      org.opencontainers.image.licenses: "MIT"
+      org.opencontainers.image.revision: "80366ce356f35250aec5b2aa1c46e838fb492b66"
+      org.opencontainers.image.source: "https://github.com/MauriceNino/dashdot"
+      org.opencontainers.image.title: "\"dash.\""
+      org.opencontainers.image.url: "https://github.com/MauriceNino/dashdot"
+      org.opencontainers.image.version: "5.2.3"
+
+    logging:
+      driver: "json-file"
+      options: {}
+
+    networks:
+      - "proxy_caddy"
+
+    privileged: true
+
+    restart: "unless-stopped"
+
+    security_opt:
+      - "label=disable"
+
+    volumes:
+      - "/:/mnt/host:ro"
+
+    working_dir: "/app"
+
+version: "3.6"

@@ -1,0 +1,91 @@
+networks:
+  proxy_caddy:
+    external: true
+    name: "proxy_caddy"
+
+services:
+  home_assistent_elias-homeassistant-1:
+
+    container_name: "home_assistent_elias-homeassistant-1"
+
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+
+    entrypoint:
+      - "/init"
+
+    environment:
+      - "DISABLE_JEMALLOC=true"
+      - "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - "LANG=C.UTF-8"
+      - "S6_BEHAVIOUR_IF_STAGE2_FAILS=2"
+      - "S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0"
+      - "S6_CMD_WAIT_FOR_SERVICES=1"
+      - "S6_SERVICES_READYTIME=50"
+      - "WHEELS_LINKS=https://wheels.home-assistant.io/musllinux/"
+      - "S6_SERVICES_GRACETIME=220000"
+
+    hostname: "ddba136e2fd7"
+
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+
+    ipc: "private"
+
+    labels:
+      caddy: "ha.sailehd.systems"
+      caddy.reverse_proxy: "{{upstreams 8123}}"
+      caddy.tls.dns: "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA"
+      com.docker.compose.config-hash: "df79d7a19e8459d683db00ff34d6b7ad494086ffb56e06d847303842f9294ccb"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: ""
+      com.docker.compose.image: "sha256:f80425afe7d9b054d72584b0922d002e5f22379199d28bc3e68816d8c041b00c"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "home_assistent_elias"
+      com.docker.compose.project.config_files: "/data/compose/8/v3/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/data/compose/8/v3"
+      com.docker.compose.replace: "cb71c90222188559371640c84efe09ad756edaa38c9750742d122cdc8745baae"
+      com.docker.compose.service: "homeassistant"
+      com.docker.compose.version: "2.20.2"
+      io.hass.arch: "amd64"
+      io.hass.base.arch: "amd64"
+      io.hass.base.image: "ghcr.io/home-assistant/amd64-base:3.18"
+      io.hass.base.name: "python"
+      io.hass.base.version: "2023.07.0"
+      io.hass.type: "core"
+      io.hass.version: "2023.8.4"
+      org.opencontainers.image.authors: "The Home Assistant Authors"
+      org.opencontainers.image.created: "2023-08-24 11:54:06+00:00"
+      org.opencontainers.image.description: "Open-source home automation platform\
+        \ running on Python 3"
+      org.opencontainers.image.documentation: "https://www.home-assistant.io/docs/"
+      org.opencontainers.image.licenses: "Apache License 2.0"
+      org.opencontainers.image.source: "https://github.com/home-assistant/core"
+      org.opencontainers.image.title: "Home Assistant"
+      org.opencontainers.image.url: "https://www.home-assistant.io/"
+      org.opencontainers.image.version: "2023.8.4"
+
+    logging:
+      driver: "json-file"
+      options: {}
+
+    networks:
+      - "proxy_caddy"
+
+    privileged: true
+
+    restart: "unless-stopped"
+
+    security_opt:
+      - "label=disable"
+
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "home_assistent_elias_config:/config"
+
+    working_dir: "/config"
+
+version: "3.6"
+
+volumes:
+  home_assistent_elias_config:
+    external: true

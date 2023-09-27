@@ -1,0 +1,260 @@
+[
+    {
+        "Id": "d6d6c55a54d4e490fed0756935b1417557f16e2626f512ae8a7a383bc3dffa02",
+        "Created": "2023-09-05T21:33:02.568504572Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "mongod"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 44934,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-09-05T21:33:05.407358176Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:fb5fba25b25a267c90549346e49e6d76211eae5bf4ac6943c49eac4d30862232",
+        "ResolvConfPath": "/var/lib/docker/containers/d6d6c55a54d4e490fed0756935b1417557f16e2626f512ae8a7a383bc3dffa02/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/d6d6c55a54d4e490fed0756935b1417557f16e2626f512ae8a7a383bc3dffa02/hostname",
+        "HostsPath": "/var/lib/docker/containers/d6d6c55a54d4e490fed0756935b1417557f16e2626f512ae8a7a383bc3dffa02/hosts",
+        "LogPath": "/var/lib/docker/containers/d6d6c55a54d4e490fed0756935b1417557f16e2626f512ae8a7a383bc3dffa02/d6d6c55a54d4e490fed0756935b1417557f16e2626f512ae8a7a383bc3dffa02-json.log",
+        "Name": "/filecloud.mongodb",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "filecloud_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "filecloud_mongo_database",
+                    "Target": "/data/db",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/8c0cfb7c3862590481380a7618e4d80b11ce6f752aab9ec09b6122d7c40b9e7e-init/diff:/var/lib/docker/overlay2/979dbc583e5a1c6da329cc5f5516a6607e8f12dd3f2006ca8c5b4dcf3ad7f7c9/diff:/var/lib/docker/overlay2/7ad00e07551d475e824a2b6841fb10d347eecf6dcf4fa3f37f0226e8baf6509f/diff:/var/lib/docker/overlay2/07b4bb79f464a703c09b81e3ec1395f1303aa51addd2ac3feb118ad838bf94b8/diff:/var/lib/docker/overlay2/ef7abd17cf23cb554a3e98722edc81656956eff8007f55b3e245c1b2fe8ec3a9/diff:/var/lib/docker/overlay2/6edd77ebfbd467a55593eb6d77cef890f5e6fda5a0b3ef77f857d1bf0af5027f/diff:/var/lib/docker/overlay2/8fd55d495136244b12def63f4a16328a7ab1883b8a95f9f858910d29a14bd84a/diff:/var/lib/docker/overlay2/04d1e37fff458854dfc3a0328c12463e429ff2277d890ff042217b7554ac8307/diff:/var/lib/docker/overlay2/06af4c9dd8da902e9fab701ab93c97f3033b680b040fa18c5919b26259c1e6e0/diff:/var/lib/docker/overlay2/3f78b7fb356b2e099948678472c3146292a1a7fe3ee19d40229914f180e23c79/diff",
+                "MergedDir": "/var/lib/docker/overlay2/8c0cfb7c3862590481380a7618e4d80b11ce6f752aab9ec09b6122d7c40b9e7e/merged",
+                "UpperDir": "/var/lib/docker/overlay2/8c0cfb7c3862590481380a7618e4d80b11ce6f752aab9ec09b6122d7c40b9e7e/diff",
+                "WorkDir": "/var/lib/docker/overlay2/8c0cfb7c3862590481380a7618e4d80b11ce6f752aab9ec09b6122d7c40b9e7e/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "filecloud_mongo_database",
+                "Source": "/var/lib/docker/volumes/filecloud_mongo_database/_data",
+                "Destination": "/data/db",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "780286ad5e60c9e800606706d01e48f59fb7490bf0f4d0b6b75f5c347787cfd2",
+                "Source": "/var/lib/docker/volumes/780286ad5e60c9e800606706d01e48f59fb7490bf0f4d0b6b75f5c347787cfd2/_data",
+                "Destination": "/data/configdb",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "d6d6c55a54d4",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "27017/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "mongodb_data_container=/data/db",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.16",
+                "JSYAML_VERSION=3.13.1",
+                "MONGO_PACKAGE=mongodb-org",
+                "MONGO_REPO=repo.mongodb.org",
+                "MONGO_MAJOR=6.0",
+                "MONGO_VERSION=6.0.8",
+                "HOME=/data/db"
+            ],
+            "Cmd": [
+                "mongod"
+            ],
+            "Image": "mongo:6.0.8",
+            "Volumes": {
+                "/data/configdb": {},
+                "/data/db": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "e72e9716ac0e9dfa0b387ceae67e539db57340ed97a81ee36425cc9e34401d9a",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:fb5fba25b25a267c90549346e49e6d76211eae5bf4ac6943c49eac4d30862232",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "filecloud",
+                "com.docker.compose.project.config_files": "/data/compose/11/v1/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/data/compose/11/v1",
+                "com.docker.compose.service": "filecloud.mongodb",
+                "com.docker.compose.version": "2.20.2",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "800e0e06d1a181e7c4fee611e927b508a1f6ad22fdc08541ffb63bfd5e6b047b",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "27017/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/800e0e06d1a1",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "filecloud_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "filecloud.mongodb",
+                        "filecloud.mongodb",
+                        "d6d6c55a54d4"
+                    ],
+                    "NetworkID": "e16dac509c26785a15cc8e330b8108a7a15d314bae05af6ce74aa1452cdc0723",
+                    "EndpointID": "d6c2e8408ac38cc75a1eb7f2744976648203ddd818366462e3b60c19a360d35b",
+                    "Gateway": "172.21.0.1",
+                    "IPAddress": "172.21.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:15:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,84 @@
+networks:
+  proxy_caddy:
+    external: true
+    name: "proxy_caddy"
+
+services:
+  homarr:
+
+    command:
+      - "node"
+      - "server.js"
+
+    container_name: "homarr"
+
+    entrypoint:
+      - "docker-entrypoint.sh"
+
+    environment:
+      - "DISABLE_EDIT_MODE=true"
+      - "EDIT_MODE_PASSWORD=OZTfM9ihU9^p+85H"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - "NODE_VERSION=20.5.1"
+      - "YARN_VERSION=1.22.19"
+      - "NEXT_TELEMETRY_DISABLED=1"
+      - "NODE_ENV=production"
+      - "NODE_OPTIONS=--no-experimental-fetch"
+      - "PORT=7575"
+
+    expose:
+      - "7575/tcp"
+
+    hostname: "251243f1ce43"
+
+    image: "ghcr.io/ajnart/homarr:latest"
+
+    ipc: "private"
+
+    labels:
+      caddy: "sailehd.systems"
+      caddy.reverse_proxy: "{{upstreams 7575}}"
+      caddy.tls.dns: "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA"
+      com.docker.compose.config-hash: "663423e696f93c8e50bfa0346d6842406375d1075259ce78982ca13134880721"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: ""
+      com.docker.compose.image: "sha256:5e4242dd37c05e76a553ad12aa5c1511505c320787348043b9e562046be922f5"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "homarr"
+      com.docker.compose.project.config_files: "/data/compose/3/v3/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/data/compose/3/v3"
+      com.docker.compose.service: "app"
+      com.docker.compose.version: "2.20.2"
+      org.opencontainers.image.created: "2023-08-13T05:54:56.095Z"
+      org.opencontainers.image.description: "Customizable browser's home page to interact\
+        \ with your homeserver's Docker containers (e.g. Sonarr/Radarr)"
+      org.opencontainers.image.licenses: "MIT"
+      org.opencontainers.image.revision: "93c4b9a9e3423e4b0a674f75f8cce173820d9b57"
+      org.opencontainers.image.source: "https://github.com/ajnart/homarr"
+      org.opencontainers.image.title: "homarr"
+      org.opencontainers.image.url: "https://github.com/ajnart/homarr"
+      org.opencontainers.image.version: "0.13.2"
+
+    logging:
+      driver: "json-file"
+      options: {}
+
+    networks:
+      - "proxy_caddy"
+
+    restart: "unless-stopped"
+
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "homarr_config:/app/data/configs"
+      - "homarr_icons:/app/public/icons"
+
+    working_dir: "/app"
+
+version: "3.6"
+
+volumes:
+  homarr_config:
+    external: true
+  homarr_icons:
+    external: true

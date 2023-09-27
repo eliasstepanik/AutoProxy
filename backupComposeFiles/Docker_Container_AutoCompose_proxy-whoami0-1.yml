@@ -1,0 +1,39 @@
+networks:
+  proxy_caddy:
+    external: true
+    name: "proxy_caddy"
+services:
+  proxy-whoami0-1:
+    command:
+      - "/app/http"
+    container_name: "proxy-whoami0-1"
+    environment:
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - "PORT=8000"
+    expose:
+      - "8000/tcp"
+    hostname: "5056b9563c84"
+    image: "jwilder/whoami"
+    ipc: "private"
+    labels:
+      caddy: "whoami.sailehd.systems"
+      caddy.reverse_proxy: "{{upstreams 8000}}"
+      caddy.tls.dns: "ionos 4dc281058e9648919a988315c84058fa.z0eKvfJSuUpeU-2W-quUCsM_6aSshAX8tdPrJ1NQUBtcaImOtoQCk82nT4kDWzBjj2l2PMo1vGXCc6vGW9bKHA"
+      com.docker.compose.config-hash: "6937937f2fe5d76fbd4b07f210c423b1e4ca2159e5bb3036fed193ff14a83b58"
+      com.docker.compose.container-number: "1"
+      com.docker.compose.depends_on: "ddns:service_started:false,caddy:service_started:false"
+      com.docker.compose.image: "sha256:89be8564e650612b1f388968f665285da6998f7140ea7a4d8e95103d7e598277"
+      com.docker.compose.oneoff: "False"
+      com.docker.compose.project: "proxy"
+      com.docker.compose.project.config_files: "/root/Proxy/docker-compose.yml"
+      com.docker.compose.project.working_dir: "/root/Proxy"
+      com.docker.compose.service: "whoami0"
+      com.docker.compose.version: "2.20.2"
+    logging:
+      driver: "json-file"
+      options: {}
+    networks:
+      - "proxy_caddy"
+    restart: "unless-stopped"
+    working_dir: "/app"
+version: "3.6"
