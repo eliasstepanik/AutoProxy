@@ -3,6 +3,7 @@ version: "3.7"
 services:
   caddy:
     image: saile2204/caddy-proxy:latest
+    build: ./Dockerfile
     restart: unless-stopped
     ports:
       - "80:80"
@@ -26,6 +27,7 @@ services:
 
   ddns:
     image: saile2204/ddns:latest
+    build: ./ddns/IonosDynamicDNSUpdater/Dockerfile
     restart: unless-stopped
     tty: true
     stdin_open: true
@@ -41,6 +43,7 @@ services:
               memory: "512M"
   portsync:
     image: saile2204/portsync:latest
+    build: ./proxy/ports/PortUpdate/Dockerfile
     restart: unless-stopped
     tty: true
     stdin_open: true
